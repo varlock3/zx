@@ -91,3 +91,6 @@ client.on('ready',async () => {
   client.channels.find(ch => ch.id === "495002982593855489" && ch.type === 'voice').join();
 
 });
+
+
+client.login(process.env.BOT_TOKEN);
