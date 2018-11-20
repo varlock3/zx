@@ -1,96 +1,30 @@
-var Discord = require('discord.js');
-var client = new Discord.Client();
-client.on('ready', () => {
-  console.log(`Welcome ggvv nawaf   ${client.user.tag}!`);
-});
+const Discord = require('discord.js'),
 
-var prefix = '#'
+    client = new Discord.Client({sisableEveryone: true})
 
-client.on('message', message => {
+    console.log("muuuuuuuuute,");
 
-  if (!message.content.startsWith(prefix)) return;
+client.on('guildMemberAdd', member => {
 
-  var args = message.content.split(' ').slice(1);
+const mohamed= member.guild.channels.get("511595760345939968");
 
-  var argresult = args.join(' ');
+if(!mohamed) return;
 
-  if (message.author.id !== "283355378811666435") return;
+if(mohamed) {
 
-  
-
-  if (message.content.startsWith(prefix + 'setwatch')) {
-
-  client.user.setActivity(argresult, {type: 'WATCHING'})
-
-     console.log('test' + argresult);
-
-    message.channel.sendMessage(`Watch Now: **${argresult}`)
-
-} 
-
- 
-
-  if (message.content.startsWith(prefix + 'setlis')) {
-
-  client.user.setActivity(argresult, {type: 'LISTENING'})
-
-     console.log('test' + argresult);
-
-    message.channel.sendMessage(`LISTENING Now: **${argresult}`)
-
-} 
-
-if (message.content.startsWith(prefix + 'setname')) {
-
-  client.user.setUsername(argresult).then
-
-      message.channel.sendMessage(`Username Changed To **${argresult}**`)
-
-  return message.reply("You Can change the username 2 times per hour");
-
-} 
-
-if (message.content.startsWith(prefix + 'setavatar')) {
-
-  client.user.setAvatar(argresult);
-
-   message.channel.sendMessage(`Avatar Changed Successfully To **${argresult}**`);
+setTimeout(() => mohamed.send(`**Ꮃelcome Ꭲo Ꮪerver Power**`), 2000)        
 
 }
 
-if (message.content.startsWith(prefix + 'setT')) {
-
-  client.user.setGame(argresult, "https://www.twitch.tv/peery13");
-
-     console.log('test' + argresult);
-
-    message.channel.sendMessage(`Streaming: **${argresult}`)
-
-} 
-
-if (message.content.startsWith(prefix + 'setgame')) {
-
-  client.user.setGame(argresult);
-
-     console.log('test' + argresult);
-
-    message.channel.sendMessage(`Playing: **${argresult}`)
-
-} 
-
 });
-
-
-
-
-
-
 
 client.on('ready',async () => {
 
   client.channels.find(ch => ch.id === "495002982593855489" && ch.type === 'voice').join();
 
 });
+
+
 
 
 client.login(process.env.BOT_TOKEN);
