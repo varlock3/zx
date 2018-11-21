@@ -12,7 +12,7 @@ if(!mohamed) return;
 
 if(mohamed) {
 
-setTimeout(() => mohamed.send(`**Ꮃelcome Ꭲo Ꮪerver Power**`), 2000)        
+setTimeout(() => mohamed.send(`**Ꮃelcome Ꭲo Ꮪerver greats**`), 2000)        
 
 }
 
