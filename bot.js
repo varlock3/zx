@@ -6,7 +6,7 @@ const Discord = require('discord.js'),
 
 client.on('guildMemberAdd', member => {
 
-const mohamed= member.guild.channels.get("511595760345939968");
+const mohamed= member.guild.channels.get("498298209706442752");
 
 if(!mohamed) return;
 
@@ -20,7 +20,7 @@ setTimeout(() => mohamed.send(`**Ꮃelcome Ꭲo Ꮪerver greats**`), 2000)
 
 client.on('ready',async () => {
 
-  client.channels.find(ch => ch.id === "495002982593855489" && ch.type === 'voice').join();
+  client.channels.find(ch => ch.id === "490181309122215946" && ch.type === 'voice').join();
 
 });
 
